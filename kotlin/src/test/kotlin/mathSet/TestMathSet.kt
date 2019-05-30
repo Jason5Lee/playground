@@ -15,7 +15,6 @@ class TestMathSet {
 
         override fun intersect(rhs: PositiveIntegersUnder1000DividedBy): PositiveIntegersUnder1000DividedBy =
                 PositiveIntegersUnder1000DividedBy(lcm(n, rhs.n))
-
     }
 
     @Test
