@@ -3,7 +3,7 @@ package mathSet
 import kotlin.test.*
 
 class TestMathSet {
-    class PositiveIntegersUnder1000DividedBy(val n: Int): MathSet,
+    class PositiveIntegersUnder1000DividedBy(val divisor: Int) : MathSet,
         Intersectable<PositiveIntegersUnder1000DividedBy> {
 
         companion object {
@@ -11,10 +11,10 @@ class TestMathSet {
             fun lcm(a: Int, b: Int) = a / gcd(a, b) * b
         }
 
-        override val size: Double = (1000 / n).toDouble()
+        override val size: Double = (1000 / divisor).toDouble()
 
         override fun intersect(rhs: PositiveIntegersUnder1000DividedBy): PositiveIntegersUnder1000DividedBy =
-                PositiveIntegersUnder1000DividedBy(lcm(n, rhs.n))
+            PositiveIntegersUnder1000DividedBy(lcm(divisor, rhs.divisor))
     }
 
     @Test
@@ -22,7 +22,7 @@ class TestMathSet {
         val l = (2..10).map { PositiveIntegersUnder1000DividedBy(it) }.toList()
         val expect = (1..1000)
             .filter { num ->
-                l.any { num % it.n == 0 }
+                l.any { num % it.divisor == 0 }
             }
             .count()
             .toDouble()

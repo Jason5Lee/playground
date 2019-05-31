@@ -3,12 +3,13 @@ package mathSet
 interface MathSet {
     val size: Double
 }
+
 interface Intersectable<T> {
     fun intersect(rhs: T): T
 }
 
 fun <T> inclusiveExclusive(sets: List<T>): Double
-where T : MathSet, T: Intersectable<T> {
+        where T : MathSet, T : Intersectable<T> {
     fun intersectLoop(acc: T, index: Int): Double = if (index >= sets.size) {
         acc.size
     } else {
