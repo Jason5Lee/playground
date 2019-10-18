@@ -2,7 +2,7 @@
   (:require [clojure.spec.alpha :as s]))
 
 (defn sieve
-  "Returns a lazy sequence of the items in coll for which item is not dividable by each previous item."
+  "Returns a lazy sequence of the numbers in numbers which is not dividable by all previous numbers."
   [numbers]
   (when-let [prime (first numbers)]
     (lazy-seq
