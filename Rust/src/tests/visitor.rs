@@ -46,7 +46,35 @@ impl<T> Node for BoxNode<T> {
 // There may be `RcNode`, `ArcNode`, etc.
 
 /// The inorder traversal of a node.
-fn inorder<'a, N: Node>(root: &'a N) -> Vec<&'a N::Elem> {
+fn inorder<N: Node>(root: &N) -> Vec<N::Elem>
+where
+    N::Elem: Copy,
+{
+    struct InorderVisitor<T> {
+        list: Vec<T>,
+    }
+    impl<'a, T: Copy> Visitor<'a, T> for InorderVisitor<T> {
+        fn visit_leaf(&mut self, value: &'a T) {
+            self.list.push(*value)
+        }
+        fn visit_inner(
+            &mut self,
+            value: &'a T,
+            left: &'a impl Node<Elem = T>,
+            right: &'a impl Node<Elem = T>,
+        ) {
+            left.accept(self);
+            self.list.push(*value);
+            right.accept(self);
+        }
+    }
+    let mut visitor = InorderVisitor { list: Vec::new() };
+    root.accept(&mut visitor);
+    visitor.list
+}
+
+/// The inorder traversal of a node.
+fn inorder_borrow<N: Node>(root: &N) -> Vec<&N::Elem> {
     struct InorderVisitor<'a, T> {
         list: Vec<&'a T>,
     }
@@ -72,30 +100,45 @@ fn inorder<'a, N: Node>(root: &'a N) -> Vec<&'a N::Elem> {
 
 #[test]
 fn tests() {
-    assert_eq!(
-        vec![2, 1, 4, 3, 5],
-        inorder(&BorrowNode::Inner(
-            3,
-            &BorrowNode::Inner(1, &BorrowNode::Leaf(2), &BorrowNode::Leaf(4)),
-            &BorrowNode::Leaf(5)
-        ))
-        .into_iter()
-        .map(|x| *x)
-        .collect::<Vec<_>>()
+    let test_tree = BorrowNode::Inner(
+        3,
+        &BorrowNode::Inner(1, &BorrowNode::Leaf(2), &BorrowNode::Leaf(4)),
+        &BorrowNode::Leaf(5),
     );
+
     assert_eq!(
         vec![2, 1, 4, 3, 5],
-        inorder(&BoxNode::Inner(
-            3,
-            Box::new(BoxNode::Inner(
-                1,
-                Box::new(BoxNode::Leaf(2)),
-                Box::new(BoxNode::Leaf(4))
-            )),
-            Box::new(BoxNode::Leaf(5))
-        ))
-        .into_iter()
-        .map(|x| *x)
-        .collect::<Vec<_>>()
+        inorder(&test_tree).into_iter().collect::<Vec<_>>()
+    );
+
+    assert_eq!(
+        vec![2, 1, 4, 3, 5],
+        inorder_borrow(&test_tree)
+            .into_iter()
+            .map(|x| *x)
+            .collect::<Vec<_>>()
+    );
+
+    let test_tree = BoxNode::Inner(
+        3,
+        Box::new(BoxNode::Inner(
+            1,
+            Box::new(BoxNode::Leaf(2)),
+            Box::new(BoxNode::Leaf(4)),
+        )),
+        Box::new(BoxNode::Leaf(5)),
+    );
+
+    assert_eq!(
+        vec![2, 1, 4, 3, 5],
+        inorder(&test_tree).into_iter().collect::<Vec<_>>()
+    );
+
+    assert_eq!(
+        vec![2, 1, 4, 3, 5],
+        inorder_borrow(&test_tree)
+            .into_iter()
+            .map(|x| *x)
+            .collect::<Vec<_>>()
     );
 }

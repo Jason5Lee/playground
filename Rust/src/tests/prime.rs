@@ -1,7 +1,7 @@
 //! Functional sieve method for finding primes.
 
 struct Primes {
-    iter: Option<Box<Iterator<Item = u64>>>,
+    iter: Option<Box<dyn Iterator<Item = u64>>>,
 }
 impl Primes {
     fn new() -> Primes {
