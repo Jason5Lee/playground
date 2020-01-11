@@ -7,11 +7,11 @@ trait Foo {
 }
 
 trait DynFoo {
-    fn foo(&self, f: &dyn Fn() -> ());
+    fn dyn_foo(&self, f: &dyn Fn() -> ());
 }
 
 impl<F: Foo> DynFoo for F {
-    fn foo(&self, f: &dyn Fn() -> ()) {
+    fn dyn_foo(&self, f: &dyn Fn() -> ()) {
         self.foo(f)
     }
 }
@@ -20,7 +20,7 @@ macro_rules! impl_dyn_with_markers {
     ($($marker:ident),*) => {
         impl<'a> Foo for dyn DynFoo + 'a$( + $marker)* {
             fn foo(&self, f: impl Fn() -> ()) {
-                self.foo(&f)
+                self.dyn_foo(&f)
             }
         }
     };
@@ -48,21 +48,29 @@ impl FooImpl {
 #[test]
 fn test_simple() {
     let foo = FooImpl::new();
-    let dyn_foo: &dyn DynFoo = &foo;
-    dyn_foo.foo(&|| {});
+    foo.foo(&|| {});
     assert_eq!(foo.cnt.get(), 1);
-    dyn_foo.foo_twice(&|| {});
+    foo.foo_twice(&|| {});
     assert_eq!(foo.cnt.get(), 3);
+    let dyn_foo: &dyn DynFoo = &foo;
+    dyn_foo.dyn_foo(&|| {});
+    assert_eq!(foo.cnt.get(), 4);
+    dyn_foo.foo_twice(&|| {});
+    assert_eq!(foo.cnt.get(), 6);
 }
 
 use std::rc::Rc;
 #[test]
 fn test_complex<'a>() {
     let foo = Rc::new(FooImpl::new());
+    foo.foo(&|| {});
+    assert_eq!(foo.cnt.get(), 1);
+    foo.foo_twice(&|| {});
+    assert_eq!(foo.cnt.get(), 3);
     let foo_cloned = Rc::clone(&foo);
     let dyn_foo: Rc<dyn DynFoo + Send + 'a> = foo_cloned;
-    dyn_foo.foo(&|| {});
-    assert_eq!(foo.cnt.get(), 1);
+    dyn_foo.dyn_foo(&|| {});
+    assert_eq!(foo.cnt.get(), 4);
     dyn_foo.foo_twice(&|| {});
-    assert_eq!(foo.cnt.get(), 3);
+    assert_eq!(foo.cnt.get(), 6);
 }
