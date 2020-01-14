@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2828f0ed-b62d-480b-857e-f4afd9447c92" name="Default Changelist" comment="Add `dyn` &amp; Add inorder copying">
+      <change beforePath="$PROJECT_DIR$/src/inorder_iter.rs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="DepsLocalSettings">
+    <option name="repoId" value="" />
+    <option name="repoUrl" value="" />
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../primes_benchmark/clojure" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="aSYvRUMq" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1S8ry8vLSXsFcgxG2tO0iHKXKpN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cargo Command.Test tests::customized_trait_object::test_simple">
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="NREPL" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="fixLineNumbers" value="false" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run learn" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="run --package learn --bin learn" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::customized_trait_object::test_complex" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package learn --lib tests::customized_trait_object::test_complex -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::customized_trait_object::test_simple" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package learn --lib tests::customized_trait_object::test_simple -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::test_formula::test_constance" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package learn --lib tests::test_formula::test_constance -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test tests::test_formula::test_var" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package learn --lib tests::test_formula::test_var -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="nocapture" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo Command.Test tests::customized_trait_object::test_simple" />
+        <item itemvalue="Cargo Command.Test tests::customized_trait_object::test_complex" />
+        <item itemvalue="Cargo Command.Run learn" />
+        <item itemvalue="Cargo Command.Test tests::test_formula::test_var" />
+        <item itemvalue="Cargo Command.Test tests::test_formula::test_constance" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="runExternalLinterOnTheFly" value="true" />
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../learn/Scala/learnDsl" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../primes_benchmark/scala" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2828f0ed-b62d-480b-857e-f4afd9447c92" name="Default Changelist" comment="" />
+      <created>1570956315502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570956315502</updated>
+      <workItem from="1570956318265" duration="2659000" />
+      <workItem from="1571014395334" duration="647000" />
+      <workItem from="1571017173944" duration="110000" />
+      <workItem from="1571017486181" duration="2576000" />
+      <workItem from="1571473681805" duration="1309000" />
+      <workItem from="1571998442450" duration="2849000" />
+      <workItem from="1572060440632" duration="101000" />
+      <workItem from="1572155488510" duration="709000" />
+      <workItem from="1572360294248" duration="197000" />
+      <workItem from="1572360506718" duration="385000" />
+      <workItem from="1573313830975" duration="2678000" />
+      <workItem from="1573349671087" duration="14000" />
+      <workItem from="1573349691787" duration="6609000" />
+      <workItem from="1573357817513" duration="4390000" />
+      <workItem from="1573386078930" duration="326000" />
+      <workItem from="1573386923077" duration="229000" />
+      <workItem from="1573544058756" duration="904000" />
+      <workItem from="1573546620382" duration="542000" />
+      <workItem from="1573569300622" duration="28000" />
+      <workItem from="1574060744457" duration="2248000" />
+      <workItem from="1574063723950" duration="1099000" />
+      <workItem from="1574065015044" duration="4065000" />
+      <workItem from="1574071784967" duration="3144000" />
+      <workItem from="1574075691370" duration="3130000" />
+      <workItem from="1576207200745" duration="5160000" />
+      <workItem from="1578734048101" duration="1510000" />
+      <workItem from="1578748068300" duration="189000" />
+      <workItem from="1578802417754" duration="19000" />
+      <workItem from="1578987271542" duration="28000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add `dyn`">
+      <created>1572016846710</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572016846710</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add `dyn` &amp; Add inorder copying">
+      <created>1572017445762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572017445762</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add `dyn` &amp; Add inorder copying">
+      <created>1572017521504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572017521504</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add `dyn`" />
+    <MESSAGE value="Add `dyn` &amp; Add inorder copying" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add `dyn` &amp; Add inorder copying" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1066" y="169" key="#com.intellij.ide.util.MemberChooser" timestamp="1576208291531">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="1066" y="169" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1576208291531" />
+    <state x="468" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578987293076">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="468" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1578987293076" />
+    <state width="738" height="134" key="GridCell.Tab.0.bottom" timestamp="1578737377696">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="738" height="134" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1578737377696" />
+    <state width="738" height="134" key="GridCell.Tab.0.center" timestamp="1578737377696">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="738" height="134" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1578737377696" />
+    <state width="738" height="134" key="GridCell.Tab.0.left" timestamp="1578737377695">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="738" height="134" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1578737377695" />
+    <state width="738" height="134" key="GridCell.Tab.0.right" timestamp="1578737377696">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="738" height="134" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1578737377696" />
+    <state x="751" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1578802418024">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="751" y="284" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1578802418024" />
+    <state x="226" y="227" width="1214" height="547" key="new project wizard" timestamp="1576212064022">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="226" y="227" width="1214" height="547" key="new project wizard/0.23.1440.877@0.23.1440.877" timestamp="1576212064022" />
+  </component>
+</project>
