@@ -12,9 +12,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2828f0ed-b62d-480b-857e-f4afd9447c92" name="Default Changelist" comment="Add `dyn` &amp; Add inorder copying">
-      <change beforePath="$PROJECT_DIR$/src/inorder_iter.rs" beforeDir="false" />
-    </list>
+    <list default="true" id="2828f0ed-b62d-480b-857e-f4afd9447c92" name="Default Changelist" comment="Add `dyn` &amp; Add inorder copying" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -246,6 +244,7 @@
       <workItem from="1578748068300" duration="189000" />
       <workItem from="1578802417754" duration="19000" />
       <workItem from="1578987271542" duration="28000" />
+      <workItem from="1580116647645" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Add `dyn`">
       <created>1572016846710</created>
