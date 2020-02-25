@@ -46,7 +46,7 @@ const [simultaneousStream, nonSimultaneousStream] =
 const [fizzStream, buzzStream] =
     partition(
         nonSimultaneousStream.pipe(map(v => v[0])),
-        ({ label: id }) => id == 3);
+        ({ label: id }) => id === 3);
 
 combinedStream
     .subscribe(({ label: id, now: t }) =>
